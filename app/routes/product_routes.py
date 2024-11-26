@@ -43,7 +43,6 @@ def postProduct(request: Request, productData: Annotated[Product, Form()]) :
     # get item value from the form POST data
     new_product = newProduct(productData)
     return templates.TemplateResponse("product/partials/product_tr.html", {"request": request, "product": new_product})
-
 # https://fastapi.tiangolo.com/tutorial/request-form-models/#pydantic-models-for-forms
 
 @router.delete("/{id}")
